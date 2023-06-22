@@ -12,7 +12,7 @@ void push_to_stack(s_node *stack, unsigned int line_num)
 	s_node new_node = NULL;
 	char *code = NULL, *conv_num = NULL;
 
-	code = strtok(NULL, " ");
+	code = strtok(NULL, " \t");
 	if (code == NULL)
 		code_err(line_num);
 	if (code[strlen(code) - 1] == '\n')

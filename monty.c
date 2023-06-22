@@ -40,7 +40,7 @@ int main(int ac, char **av)
 
 	while (fgets(line, sizeof(line), fd) != NULL)
 	{
-		op = strtok(line, " ");
+		op = strtok(line, " \t");
 		str_len = strlen(op);
 		handle_opcode(&stack, str_len, op, &line_num);
 	}
