@@ -18,7 +18,7 @@ void push_to_stack(s_node *stack, unsigned int line_num)
 	if (code[strlen(code) - 1] == '\n')
 		code[strlen(code) - 1] = '\0';
 	my_node->data = strtol(code, &conv_num, 10);
-	if (*conv_num != '\0')
+	if (*conv_num != '\0' || conv_num == code)
 		code_err(line_num);
 
 	new_node = malloc(sizeof(stack_t));
