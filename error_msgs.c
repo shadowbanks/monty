@@ -44,7 +44,7 @@ void monty_usage_err(void)
  */
 void open_file_err(char *file_name)
 {
-	fprintf(stderr, "Can't open file %s\n", file_name);
+	fprintf(stderr, "Error: Can't open file %s\n", file_name);
 	free_stack();
 	fclose(my_node->fd);
 	free(my_node);
