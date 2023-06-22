@@ -33,8 +33,6 @@ void unknown(char *op, int *line_num)
 void monty_usage_err(void)
 {
 	fprintf(stderr, "USAGE: monty file\n");
-	fclose(my_node->fd);
-	free(my_node);
 	exit(EXIT_FAILURE);
 }
 
@@ -45,9 +43,6 @@ void monty_usage_err(void)
 void open_file_err(char *file_name)
 {
 	fprintf(stderr, "Error: Can't open file %s\n", file_name);
-	free_stack();
-	fclose(my_node->fd);
-	free(my_node);
 	exit(EXIT_FAILURE);
 }
 

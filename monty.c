@@ -46,7 +46,7 @@ int main(int ac, char **av)
 	}
 	free_stack();
 	free(my_node);
-
 	fclose(fd);
+
 	return (0);
 }
