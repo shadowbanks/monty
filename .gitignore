@@ -1,0 +1,10 @@
+prep_bash
+add_commit
+update_README
+add_commit_push
+main.c
+*.swp
+a.out
+hsh
+checker.sh
+bin_ls.sh
