@@ -6,6 +6,7 @@
  */
 void code_err(unsigned int line_num)
 {
+	fflush(stderr);
 	fprintf(stderr, "L%d: usage: push integer\n", line_num);
 	free_stack();
 	fclose(my_node->fd);
@@ -20,6 +21,7 @@ void code_err(unsigned int line_num)
  */
 void unknown(char *op, int *line_num)
 {
+	fflush(stderr);
 	fprintf(stderr, "L%d: unknown instruction %s\n", *line_num, op);
 	free_stack();
 	fclose(my_node->fd);
@@ -32,6 +34,7 @@ void unknown(char *op, int *line_num)
  */
 void monty_usage_err(void)
 {
+	fflush(stderr);
 	fprintf(stderr, "USAGE: monty file\n");
 	exit(EXIT_FAILURE);
 }
@@ -42,6 +45,7 @@ void monty_usage_err(void)
  */
 void open_file_err(char *file_name)
 {
+	fflush(stderr);
 	fprintf(stderr, "Error: Can't open file %s\n", file_name);
 	exit(EXIT_FAILURE);
 }
@@ -51,6 +55,7 @@ void open_file_err(char *file_name)
  */
 void malloc_err(void)
 {
+	fflush(stderr);
 	fprintf(stderr, "Error: malloc failed\n");
 	free_stack();
 	fclose(my_node->fd);

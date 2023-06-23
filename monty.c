@@ -28,6 +28,7 @@ int main(int ac, char **av)
 
 	if (my_node == NULL)
 	{
+		fflush(stderr);
 		fprintf(stderr, "Error: malloc failed\n");
 		fclose(fd);
 		exit(EXIT_FAILURE);

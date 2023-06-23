@@ -18,6 +18,7 @@ void div_2top(s_node *stack, unsigned int line_num)
 		temp = my_node->current->next;
 		if (my_node->current->n == 0)
 		{
+			fflush(stderr);
 			fprintf(stderr, "L%d: division by zero\n", line_num);
 			free_stack();
 			fclose(my_node->fd);
