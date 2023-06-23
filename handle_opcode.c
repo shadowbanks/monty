@@ -58,8 +58,11 @@ void handle_opcode(s_node *stack, int str_len, char *op, int *line_num)
 		{
 			if (strncmp(oper[i].opcode, op, strlen(oper[i].opcode)) == 0)
 			{
-				oper[i].f(stack, *line_num);
-				return;
+				if (strlen(oper[i].opcode) == strlen(op))
+				{
+					oper[i].f(stack, *line_num);
+					return;
+				}
 			}
 		}
 		unknown(op, line_num);
