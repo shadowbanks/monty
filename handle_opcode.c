@@ -45,11 +45,11 @@ void handle_opcode(s_node *stack, int str_len, char *op, int *line_num)
 		{NULL, NULL}
 	};
 
+	/*Line number*/
+	++(*line_num);
 	/*Check if Line is empty*/
 	if (str_len && !blank_line(op))
 	{
-		/*Line number*/
-		++(*line_num);
 		/*Remove newline if it exist from the opcode read*/
 		if (op[strlen(op) - 1] == '\n')
 			op[strlen(op) - 1] = '\0';
