@@ -20,10 +20,7 @@ void div_2top(s_node *stack, unsigned int line_num)
 		{
 			fflush(stderr);
 			fprintf(stderr, "L%d: division by zero\n", line_num);
-			free_stack();
-			fclose(my_node->fd);
-			free(my_node);
-			exit(EXIT_FAILURE);
+			free_close();
 		}
 		temp->n = temp->n / my_node->current->n;
 		free(my_node->current);
@@ -32,9 +29,6 @@ void div_2top(s_node *stack, unsigned int line_num)
 	else
 	{
 		fprintf(stderr, "L%d: can't div, stack too short\n", line_num);
-		free_stack();
-		fclose(my_node->fd);
-		free(my_node);
-		exit(EXIT_FAILURE);
+		free_close();
 	}
 }

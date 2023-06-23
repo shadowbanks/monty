@@ -15,10 +15,7 @@ void pint_stack(s_node *stack, unsigned int line_num)
 	{
 		fflush(stderr);
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_num);
-		free_stack();
-		fclose(my_node->fd);
-		free(my_node);
-		exit(EXIT_FAILURE);
+		free_close();
 	}
 	printf("%d\n", my_node->current->n);
 }

@@ -42,6 +42,7 @@ void handle_opcode(s_node *stack, int str_len, char *op, int *line_num)
 		{"div", div_2top},
 		{"mul", mul_2top},
 		{"mod", mod_2top},
+		{"pchar", pchar},
 		{NULL, NULL}
 	};
 

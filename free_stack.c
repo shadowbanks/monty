@@ -19,3 +19,14 @@ void free_stack(void)
 		temp = temp2;
 	}
 }
+
+/**
+ * free_close - Free all necessary memory and exit with failure
+ */
+void free_close(void)
+{
+	free_stack();
+	fclose(my_node->fd);
+	free(my_node);
+	exit(EXIT_FAILURE);
+}

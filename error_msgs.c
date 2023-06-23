@@ -6,12 +6,8 @@
  */
 void code_err(unsigned int line_num)
 {
-	fflush(stderr);
 	fprintf(stderr, "L%d: usage: push integer\n", line_num);
-	free_stack();
-	fclose(my_node->fd);
-	free(my_node);
-	exit(EXIT_FAILURE);
+	free_close();
 }
 
 /**
@@ -23,10 +19,7 @@ void unknown(char *op, int *line_num)
 {
 	fflush(stderr);
 	fprintf(stderr, "L%d: unknown instruction %s\n", *line_num, op);
-	free_stack();
-	fclose(my_node->fd);
-	free(my_node);
-	exit(EXIT_FAILURE);
+	free_close();
 }
 
 /**
@@ -57,8 +50,5 @@ void malloc_err(void)
 {
 	fflush(stderr);
 	fprintf(stderr, "Error: malloc failed\n");
-	free_stack();
-	fclose(my_node->fd);
-	free(my_node);
-	exit(EXIT_FAILURE);
+	free_close();
 }
