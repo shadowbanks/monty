@@ -31,15 +31,22 @@ void handle_opcode(s_node *stack, int str_len, char *op, int *line_num)
 	int i = 0;
 
 	instruction_t oper[] = {
-		{"push", push_to_stack}, {"pall", pall_stack},
-		{"pint", pint_stack}, {"pop", pop_stack},
-		{"swap", swap}, {"add", add_2top}, {"nop", nop},
-		{"sub", sub_2top}, {"div", div_2top}, {"mul", mul_2top},
-		{"mod", mod_2top}, {"pchar", pchar}, {"pstr", pstr},
+		{"push", push_to_stack},
+		{"pall", pall_stack},
+		{"pint", pint_stack},
+		{"pop", pop_stack},
+		{"swap", swap},
+		{"add", add_2top},
+		{"nop", nop},
+		{"sub", sub_2top},
+		{"div", div_2top},
+		{"mul", mul_2top},
+		{"mod", mod_2top},
+		{"pchar", pchar},
+		{"pstr", pstr},
 		{NULL, NULL}
 	};
 
-	/*Line number*/
 	++(*line_num);
 	/*Check if Line is empty*/
 	if (str_len && !blank_line(op))
