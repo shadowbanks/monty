@@ -43,7 +43,8 @@ int main(int ac, char **av)
 	{
 		op = strtok(line, " \t");
 		str_len = strlen(op);
-		handle_opcode(&stack, str_len, op, &line_num);
+		if (check_4_comment(op))
+			handle_opcode(&stack, str_len, op, &line_num);
 	}
 	free_stack();
 	free(my_node);
