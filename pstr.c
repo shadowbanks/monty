@@ -26,7 +26,7 @@ void pstr(s_node *stack, unsigned int line_num)
 		num = temp->n;
 		if (num > 0)
 		{
-			if (!isascii(num))
+			if (!_isascii(num))
 				printf("%c", num);
 			else
 			{

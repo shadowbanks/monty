@@ -81,7 +81,7 @@ void pchar(s_node *stack, unsigned int line_num);
 void pstr(s_node *stack, unsigned int line_num);
 int check_4_comment(char *op);
 size_t node_count(void);
-int isascii(int value);
+int _isascii(int value);
 void malloc_err(void);
 void open_file_err(char *);
 void monty_usage_err(void);

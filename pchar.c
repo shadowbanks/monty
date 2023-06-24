@@ -17,7 +17,7 @@ void pchar(s_node *stack, unsigned int line_num)
 		free_close();
 	}
 	temp = my_node->current->n;
-	if (!isascii(temp))
+	if (!_isascii(temp))
 		printf("%c\n", temp);
 	else
 	{
@@ -27,12 +27,12 @@ void pchar(s_node *stack, unsigned int line_num)
 }
 
 /**
- * isascii - Check if value is in range of ascii value
+ * _isascii - Check if value is in range of ascii value
  * @value: the value to check
  *
  * Return: 0 (if ascii), 1 (not an ascii)
  */
-int isascii(int value)
+int _isascii(int value)
 {
 	if (value >= 0 && value <= 127)
 		return (0);
