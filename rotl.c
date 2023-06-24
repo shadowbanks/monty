@@ -13,10 +13,12 @@ void rotl(s_node *stack, unsigned int line_num)
 	if (my_node->current == NULL)
 		return;
 
-	(*stack)->next = my_node->current;
 	temp = my_node->current->next;
-	temp->prev = NULL;
+	(*stack)->next = my_node->current;
+	my_node->current->prev = *stack;
 	my_node->current->next = NULL;
+	temp->prev = NULL;
 	*stack = my_node->current;
+	my_node->head = *stack;
 	my_node->current = temp;
 }

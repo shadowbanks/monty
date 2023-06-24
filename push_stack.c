@@ -25,11 +25,11 @@ void push_to_stack(s_node *stack, unsigned int line_num)
 	if (new_node == NULL)
 		malloc_err();
 
-	new_node->prev = NULL;
 	new_node->n = my_node->data;
 
 	if (*stack == NULL)
 	{
+		new_node->prev = NULL;
 		new_node->next = NULL;
 		*stack = new_node;
 		my_node->current = new_node;
@@ -37,5 +37,6 @@ void push_to_stack(s_node *stack, unsigned int line_num)
 		return;
 	}
 	new_node->next = my_node->current;
+	my_node->current->prev = new_node;
 	my_node->current = new_node;
 }

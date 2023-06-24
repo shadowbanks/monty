@@ -13,5 +13,12 @@ void rotr(s_node *stack, unsigned int line_num)
 	if (my_node->current == NULL)
 		return;
 
-	
+	temp = (*stack)->prev;
+	my_node->current->prev = *stack;
+	(*stack)->next = my_node->current;
+	(*stack)->prev = NULL;
+	temp->next = NULL;
+	my_node->current = *stack;
+	*stack = temp;
+	my_node->head = *stack;
 }
