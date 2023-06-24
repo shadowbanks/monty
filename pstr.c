@@ -30,15 +30,14 @@ void pstr(s_node *stack, unsigned int line_num)
 				printf("%c", num);
 			else
 			{
-				printf("\n");
 				break;
 			}
 		}
 		else
 		{
-			printf("\n");
 			break;
 		}
 		temp = temp->next;
 	}
+	printf("\n");
 }
