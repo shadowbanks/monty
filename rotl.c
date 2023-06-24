@@ -8,9 +8,11 @@
 void rotl(s_node *stack, unsigned int line_num)
 {
 	s_node temp = NULL;
+	int nodes = 0;
 
 	(void)line_num;
-	if (my_node->current == NULL)
+	nodes = node_count();
+	if (my_node->current == NULL || nodes == 1)
 		return;
 
 	temp = my_node->current->next;
