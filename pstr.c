@@ -15,7 +15,6 @@ void pstr(s_node *stack, unsigned int line_num)
 
 	if (my_node->current == NULL)
 	{
-		printf("\n");
 		free_close();
 	}
 
