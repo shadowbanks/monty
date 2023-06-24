@@ -15,8 +15,8 @@ void pstr(s_node *stack, unsigned int line_num)
 
 	if (my_node->current == NULL)
 	{
-		fprintf(stderr, "\n");
-		free_close();
+		printf("\n");
+		return;
 	}
 
 	temp = my_node->current;

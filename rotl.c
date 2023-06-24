@@ -11,7 +11,7 @@ void rotl(s_node *stack, unsigned int line_num)
 
 	(void)line_num;
 	if (my_node->current == NULL)
-		free_close();
+		return;
 
 	(*stack)->next = my_node->current;
 	temp = my_node->current->next;
