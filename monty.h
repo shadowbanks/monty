@@ -78,6 +78,7 @@ void div_2top(s_node *stack, unsigned int line_num);
 void mul_2top(s_node *stack, unsigned int line_num);
 void mod_2top(s_node *stack, unsigned int line_num);
 void pchar(s_node *stack, unsigned int line_num);
+void pstr(s_node *stack, unsigned int line_num);
 int check_4_comment(char *op);
 size_t node_count(void);
 void malloc_err(void);
